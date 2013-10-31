@@ -1,0 +1,58 @@
+body { 
+  font-family:      Georgia, "Times New Roman", Times, serif;
+  font-size:        small;
+  margin:           0px;
+  text-align:  center;
+}
+
+#web_bg{
+  text-align: left;
+  background-color:yellow;
+  border:2px solid;
+  border-image:url(images/border.png) 30 30 round;
+  -moz-border-image:url(images/border.png) 30 30 round; /* 老的 Firefox */
+  -webkit-border-image:url(images/border.png) 30 30 round; /* Safari 和 Chrome */
+  -o-border-image:url(images/border.png) 30 30 round; /* Opera */
+}
+#text1,#text2{
+  width: 50px;
+  background-image: url(images/background2.gif);
+  border-radius: 5px;
+  border-color: white;
+}
+
+#user{
+  width: 140px;
+  background-image: url(images/background3.gif);
+  border-radius: 5px;
+  border-color: white;
+}
+#mima{
+  width: 135px;
+  background-image: url(images/background3.gif);
+  border-radius: 5px;
+  border-color: white;
+}
+#button{
+  width: 150px;
+  border-radius: 5px;
+  border-color: white;
+}
+
+#form_bg{
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin:-100px 0 0 -100px;
+  width: 200px;
+  height: 200px;
+}
+h1 {
+  font-family: "宋体", "微软雅黑";
+  font-size:        300%;
+  text-shadow: 5px 5px 5px #FF0000;
+  color:            #66FF66;
+}
+
+h2 { font-size: 110%; }
+
