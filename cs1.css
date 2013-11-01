@@ -33,8 +33,13 @@ body {
   border-radius: 5px;
   border-color: white;
 }
-#button{
-  width: 150px;
+#login{
+  width: 100px;
+  border-radius: 5px;
+  border-color: white;
+}
+#signup{
+  width: 100px;
   border-radius: 5px;
   border-color: white;
 }
