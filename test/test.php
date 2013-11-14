@@ -1,16 +1,15 @@
-
 <!DOCTYPE php>
 <php>
 <head>
 <title>Love house</title>
 <meta http-equiv="Content-Type" content="text/php;charset=utf-8"/>
-<link rel="stylesheet" type="text/css" href="cs.css"/>
-<link rel="stylesheet" type="text/css" href="style.css"/>
-<link rel="stylesheet" type="text/css" href="slickmenu.css"/>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="jslickmenu.js"></script>
-<script type="text/javascript" src="script.js"></script>
-<script type="text/javascript" src="scroller.js"></script>
+<link rel="stylesheet" type="text/css" href="testCSS/cs.css"/>
+<link rel="stylesheet" type="text/css" href="testCSS/style.css"/>
+<link rel="stylesheet" type="text/css" href="testCSS/slickmenu.css"/>
+<script type="text/javascript" src="testJS/jquery.js"></script>
+<script type="text/javascript" src="testJS/jslickmenu.js"></script>
+<script type="text/javascript" src="testJS/script.js"></script>
+<script type="text/javascript" src="testJS/scroller.js"></script>
 </head>
 <body id="mainbody">
 <embed id="bofang" src="../musi.mp3" autostart="true" hidden="true" loop="false" vspace="1" width="1" height="1" hspace="1">
@@ -56,19 +55,19 @@
 
 		<div id="menu">
 			<ul>
-				<li><a href="yishu/index.php">
+				<li><a href="photos/index.php?num=1">
 					<img src="../images/item-01.jpg" alt="艺术照" />
 				</a></li>
-				<li><a href="yunan/index.php">
+				<li><a href="photos/index.php?num=2">
 					<img src="../images/item-02.jpg" alt="云南" />
 				</a></li>
-				<li><a href="suzhou/index.php">
+				<li><a href="photos/index.php?num=3">
 					<img src="../images/item-03.jpg" alt="苏州" />
 				</a></li>
-				<li><a href="xian/index.php">
+				<li><a href="photos/index.php?num=4">
 					<img src="../images/item-04.jpg" alt="西安" />
 				</a></li>
-				<li><a href="yangzhou/index.php">
+				<li><a href="photos/index.php?num=5">
 					<img src="../images/item-05.jpg" alt="扬州" />
 				</a></li>
 			</ul>
