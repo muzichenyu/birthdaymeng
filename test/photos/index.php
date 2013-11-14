@@ -27,7 +27,7 @@
     <section>
         <ul id="gallery">
             <li id="fullPreview"></li>
-              <?php include '../words.inc.php';
+              <?php include 'words.inc.php';
                 	$images=array("yishu","yunnan","suzhou","xian","yangzhou");
                 	$dir = "{$images[$num-1]}/";
                     $count=0;
