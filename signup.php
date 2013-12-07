@@ -1,7 +1,7 @@
 <?php
 
-$name=$_GET["nam"];
-$password=$_GET["passw"];
+$name=$_REQUEST["nam"];
+$password=$_REQUEST["passw"];
 $response="false";
 $con = mysql_connect("localhost","root","");
 if (!$con)

@@ -2,6 +2,8 @@ $(document).ready(function(){
 	var xmlHttp
 	$("#form_bg").hide();
 	setTimeout( $('#form_bg').fadeIn(5000),5000);
+
+	/*登录功能的实现*/
 	$("#login").click(function(){
 		var name=$("#user").val();
 		var password=$("#mima").val();
@@ -20,16 +22,38 @@ $(document).ready(function(){
 		  alert ("Browser does not support HTTP Request")
 		  return
 		  } 
-		var url="login.php";
+		/*var url="login.php";
 		url=url+"?nam="+name+"&passw="+password;
 		url=url+"&sid="+Math.random();
 		xmlHttp.onreadystatechange=stateChanged ;
 		xmlHttp.open("GET",url,true);
-		xmlHttp.send(null);
+		xmlHttp.send(null);*/
+		/*xmlhttp.open("POST","login.php",true);
+		xmlHttp.onreadystatechange=stateChanged ;
+		xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		xmlhttp.send("nam=muzichenyu&passw=728huang625");*/
+		var sParams ='';
+		sParams = addPostParam(sParams,"nam",name);
+		sParams = addPostParam(sParams,"passw",password);
+		xmlHttp.open("post", "login.php", true);
+		xmlHttp.onreadystatechange=stateChanged ;
+		xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+		xmlHttp.send(sParams);
 		$("#user").val("");
 		$("#mima").val("");
 		
 	});
+
+	function addPostParam(sParams, sParamName, sParamValue){
+
+         if(sParams.length>0){sParams += "&"};
+
+         return sParams +encodeURIComponent(sParamName) + "="
+
+          + encodeURIComponent(sParamValue);
+
+}
+	/*当在密码处回车时的响应*/
 	$("#mima").keypress(function (event) {
     var key = event.which;
     if (key == 13) {
@@ -38,6 +62,8 @@ $(document).ready(function(){
         $("#login").focus();  //支持IE，firefox无效。
     }
     });
+
+   /*注册功能的实现*/
     $("#signup").click(function(){
 		var name=$("#user").val();
 		var password=$("#mima").val();
@@ -56,16 +82,19 @@ $(document).ready(function(){
 		  alert ("Browser does not support HTTP Request")
 		  return
 		  } 
-		var url="signup.php";
-		url=url+"?nam="+name+"&passw="+password;
-		url=url+"&sid="+Math.random();
+		var sParams ='';
+		sParams = addPostParam(sParams,"nam",name);
+		sParams = addPostParam(sParams,"passw",password);
+		xmlHttp.open("post", "signup.php", true);
 		xmlHttp.onreadystatechange=signupstateChanged ;
-		xmlHttp.open("GET",url,true);
-		xmlHttp.send(null);
+		xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+		xmlHttp.send(sParams);
 		$("#user").val("");
 		$("#mima").val("");
 		
 	});
+
+	/*login.php的状态返回的监听与响应*/
 	function stateChanged() 
 	{ 
 	if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
@@ -79,13 +108,14 @@ $(document).ready(function(){
 		$("#text").hide();
 		$("#text").fadeIn();
 		document.getElementById("text").style.color="red";
-			$("#text").text("用户名密码错误,请重新登录！");		
+			$("#text").text("用户名密码错误,请重新登录！"+xmlHttp.responseText);		
 	}
 	setTimeout("$('#text').fadeOut()",5000);
 	 } 
 	}
 
 
+    /*signup.php的状态返回的监听与响应*/
 	function signupstateChanged() 
 	{ 
 	if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
@@ -108,6 +138,8 @@ $(document).ready(function(){
 	 } 
 	}
 
+
+     /*实例化Ajax的xmlHttp对象*/
 	function GetXmlHttpObject()
 	{
 	var xmlHttp=null;

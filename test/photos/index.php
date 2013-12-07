@@ -11,11 +11,20 @@
     <link href="css/main.css" rel="stylesheet" type="text/css" />
 
     <!-- add scripts -->
+    <!-- 禁止图片另存为 -->
+    <script>
+	document.oncontextmenu = function()
+	{
+	alert("本站禁止图片另存为");//弹出提示:"点击了鼠标右键";
+	return false;//屏蔽掉的右键菜单
+	}
+	</script>
     <script src="js/jquery.min.js"></script>
     <script src="js/least.min.js"></script>
     <script src="js/jquery.lazyload.js"></script>
 </head>
 <body>
+
     <header>
     	<?php
     		$num=$_GET["num"];

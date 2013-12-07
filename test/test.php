@@ -75,7 +75,7 @@
 
 		<p>生日快乐</p>
 
-		<video id="myvideo" width="600" height="450" controls="controls">
+		<video oncontextmenu ="return false" id="myvideo" width="600" height="450" controls="controls">
 		  <source src="../1.ogg" type="video/ogg">
 		  <source src="../movie.webm" type="video/webm">
 		</video>
